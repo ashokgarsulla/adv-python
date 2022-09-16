@@ -100,11 +100,19 @@ def percent(func):
         print("%" * 30)
     return inner
 
-
+print("-" *30,'LINE 103',"-" *30)
 @star
 @percent
 def printer(msg):
     print(msg)
     
 printer("Hello")
+
+
+print("-" *30,'LINE 112',"-" *30)
+# is equivalent to:
+def printer(msg):
+    print(msg)
+printer = star(percent(printer))
+printer("Equivalent")
 # -----------------------------------------------------------------------------------------------------------------------
