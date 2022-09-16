@@ -77,6 +77,14 @@ divide(3,2)
 # -----------------------------------------------------------------------------------------------------------------------
 # Chaining Decorators in Python
 # -----------------------------------------------------------------------------------------------------------------------
+# A keen observer will notice that parameters of the nested inner() function inside the decorator is the same as the parameters 
+# of functions it decorates. Taking this into account, now we can make general decorators that work with any number of parameters.
+
+# A keen observer will notice that parameters of the nested inner() function inside the decorator is the same as the parameters of
+# functions it decorates. Taking this into account, now we can make general decorators that work with any number of parameters.
+# =========== function(*args, **kwargs) =============================================================
+# args : will be the tuple of positional arguments 
+# kwargs: will be the dictionary of keyword arguments
 def star(func):
     def inner(*args, **kwargs):
         print("*" * 30)
