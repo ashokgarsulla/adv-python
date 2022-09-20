@@ -88,7 +88,6 @@ class PowTwo:
         self.n = 0
         return self
 
-print("*"*20,"LINE 92","*"*20)
     def __next__(self):
         print(self.n)
         if self.n <= self.max:
@@ -114,3 +113,27 @@ print(next(i))
 print(next(i))
 print(next(i))
 # print(next(i))
+
+# We can also use a for loop to iterate over our iterator class
+print("*"*20,"LINE 119","*"*20)
+for i in PowTwo(5):
+    print(i)
+
+
+# //////////////////////////////////////////////////////////////////////////
+# Python Infinite Iterators
+# //////////////////////////////////////////////////////////////////////////
+# The built-in function iter() can be called with two arguments where the first argument must be a callable object (function) 
+# and second is the sentinel. The iterator calls this function until the returned value is equal to the sentinel.
+
+print("*"*20,"LINE 130","*"*20)
+
+print(int())
+inf = iter(int,1)
+# output will zero
+print(next(inf)) 
+# output will zero
+print(next(inf))
+
+# We can see that the int() function always returns 0. So passing it as iter(int,1) will return an iterator that calls 
+# int() until the returned value equals 1. This never happens and we get an infinite iterator.
