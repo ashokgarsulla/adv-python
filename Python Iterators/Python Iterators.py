@@ -27,5 +27,10 @@ print(my_iter.__next__())
 # Output: 3
 print(my_iter.__next__())
 
-# This will raise error, no items left
-next(my_iter)
+# This will raise error, no items left //=>  StopIteration
+# next(my_iter)
+
+# ///////// StopIteration error will automatically solve by for loop
+print("*"*20,"LINE 35","*"*20)
+for i in my_list:
+    print(i)
