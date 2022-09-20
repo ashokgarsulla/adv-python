@@ -69,3 +69,48 @@ while True:
 #  Note that any other kind of exception will pass through.
         break
 # -------------------------- NOTES END ----------------------------------------------------------
+
+# //////////////////////////////////////////////////////////////////////////
+# Building Custom Iterators
+# //////////////////////////////////////////////////////////////////////////
+# Building an iterator from scratch is easy in Python. We just have to implement the __iter__() and the __next__() methods.
+# The __iter__() method returns the iterator object itself. If required, some initialization can be performed.
+# The __next__() method must return the next item in the sequence. On reaching the end, and in subsequent calls, it must raise StopIteration.
+
+class PowTwo:
+    """Class to implement an iterator
+    of powers of two"""
+
+    def __init__(self, max=0):
+        self.max = max
+
+    def __iter__(self):
+        self.n = 0
+        return self
+
+print("*"*20,"LINE 92","*"*20)
+    def __next__(self):
+        print(self.n)
+        if self.n <= self.max:
+            result = 2 ** self.n
+            self.n += 1
+            return result
+        else:
+            raise StopIteration
+
+
+print("*"*20,"LINE 102","*"*20)
+# create an object
+numbers = PowTwo(3)
+for i in numbers:
+    print(i)
+
+# create an iterable from the object
+i = iter(numbers)
+
+# Using next to get to the next iterator element
+print(next(i))
+print(next(i))
+print(next(i))
+print(next(i))
+# print(next(i))
