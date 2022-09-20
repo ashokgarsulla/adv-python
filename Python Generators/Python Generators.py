@@ -1,0 +1,5 @@
+# Python Generators : A generator is a function that returns an object (iterator) which we can iterate over (one value at a time).
+# /////////////////////////////////////////////////////////////////////////////////////////////////
+# Create Generators in Python
+# /////////////////////////////////////////////////////////////////////////////////////////////////
+# It is as easy as defining a normal function, but with a "yield" statement instead of a "return" statement
