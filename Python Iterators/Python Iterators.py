@@ -137,3 +137,30 @@ print(next(inf))
 
 # We can see that the int() function always returns 0. So passing it as iter(int,1) will return an iterator that calls 
 # int() until the returned value equals 1. This never happens and we get an infinite iterator.
+
+# ----------------- custome infnite iterator -----------------------------
+print("*"*20,"LINE 143","*"*20)
+class InfIter:
+    """Infinite iterator to return all
+        odd numbers"""
+
+    def __iter__(self):
+        self.num = 1
+        return self
+
+    def __next__(self):
+        num = self.num
+        self.num += 2
+        return num\
+
+a = iter(InfIter())
+print(next(a))
+print(a.__next__())
+print(a.__next__())
+print(a.__next__())
+
+# advantage :
+# -  save resources
+# - Like shown above, we could get all the odd numbers without storing the entire number system in memory
+# - We can have infinite items (theoretically) in finite memory.
+# PS - There's an easier way to create iterators in Python -> Python generators using yield
