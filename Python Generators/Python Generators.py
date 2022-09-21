@@ -172,6 +172,9 @@ print(next(generator))
 # 3. Represent Infinite Stream
 # 4. Pipelining Generators
 
+# -------------------------------------------------------------------------------------------------
+# # 1. Easy to Implement
+# -------------------------------------------------------------------------------------------------
 #  difficulty in  using iterartor
 class PowTwo:
     def __init__(self, max=0):
@@ -195,3 +198,31 @@ def PowTwoGen(max=0):
     while n < max:
         yield 2 ** n
         n += 1
+
+# -------------------------------------------------------------------------------------------------
+# 2. Memory Efficient
+# -------------------------------------------------------------------------------------------------
+# * A normal function to return a sequence will create the entire sequence in memory before returning the result. 
+# This is an overkill, if the number of items in the sequence is very large
+# * Generator implementation of such sequences is memory friendly and is preferred since it only produces one item at a time.
+
+
+my_list = [1, 3, 6, 10]
+
+# square each term using list comprehension
+list_ = [x**2 for x in my_list]
+
+# same thing can be done using a generator expression
+# generator expressions are surrounded by parenthesis ()
+generator = (x**2 for x in my_list)
+
+print("*"*20,"LINE 157","*"*20)
+print(list_)
+
+print("*"*20,"LINE 160","*"*20)
+# It will print genrator object
+print(generator)
+print(next(generator))
+print(next(generator))
+print(next(generator))
+print(next(generator))
