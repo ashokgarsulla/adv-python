@@ -119,3 +119,16 @@ print(next(my_even_loo_obj))
 print(my_even_loo_obj.__next__())
 print(my_even_loo_obj.__next__())
 print(my_even_loo_obj.__next__())
+
+
+# even series infnite nenerator
+def infnite_even_generator():
+    n = 0
+    while True:
+        n += 2
+        yield n
+
+print("*"*20,"LINE 132","*"*20)
+inf_even_obj = infnite_even_generator()
+for i in range(10):
+    print(inf_even_obj.__next__())
