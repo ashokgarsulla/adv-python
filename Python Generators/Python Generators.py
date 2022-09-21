@@ -132,3 +132,34 @@ print("*"*20,"LINE 132","*"*20)
 inf_even_obj = infnite_even_generator()
 for i in range(10):
     print(inf_even_obj.__next__())
+
+# /////////////////////////////////////////////////////////////////////////////////////////////////
+# Python Generator Expression
+# /////////////////////////////////////////////////////////////////////////////////////////////////
+# The syntax for generator expression is similar to that of a list comprehension in Python. But the square brackets are replaced with round parentheses.
+# The major difference between a list comprehension and a generator expression is that a 
+# => list comprehension produces the entire list 
+# =>while the generator expression produces one item at a time.
+# They have lazy execution ( producing items only when asked for ). For this reason, a generator expression is much more memory efficient than an equivalent list comprehension.
+
+# Initialize the list
+my_list = [1, 3, 6, 10]
+
+# square each term using list comprehension
+list_ = [x**2 for x in my_list]
+
+# same thing can be done using a generator expression
+# generator expressions are surrounded by parenthesis ()
+generator = (x**2 for x in my_list)
+
+print("*"*20,"LINE 157","*"*20)
+print(list_)
+
+print("*"*20,"LINE 160","*"*20)
+# It will print genrator object
+print(generator)
+print(next(generator))
+print(next(generator))
+print(next(generator))
+print(next(generator))
+
