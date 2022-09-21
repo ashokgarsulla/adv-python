@@ -93,7 +93,29 @@ print(my_gen_obj.__next__())
 print(next(my_gen_obj))
 print(next(my_gen_obj))
 print(next(my_gen_obj))
-
-# when the function terminates, StopIteration is raised automatically on further calls
-# // It will give StopIteration  bcz:Finally, 
 # print(next(my_gen_obj)) 
+# // It will give StopIteration 
+#  bcz:Finally, when the function terminates, StopIteration is raised automatically on further calls
+
+# /////////////////////////////////////////////////////////////////////////////////////////////////
+# Python Generators with a Loop
+# /////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+def even_generator(max):
+    for i in range(2,max,2):
+        yield i
+
+print("*"*20,"LINE 110","*"*20)
+even_loo_obj = even_generator(20)
+for i in even_loo_obj:
+    print(i)
+print("*"*20,"LINE 114","*"*20)
+my_even_loo_obj = even_generator(20)
+print(next(my_even_loo_obj))
+print(next(my_even_loo_obj))
+print(next(my_even_loo_obj))
+
+print(my_even_loo_obj.__next__())
+print(my_even_loo_obj.__next__())
+print(my_even_loo_obj.__next__())
