@@ -132,3 +132,50 @@ print(human.to_fahrenheit())
 # c.temperature automatically calls get_temperature()
 # Note: The actual temperature value is stored in the private _temperature variable. 
 # The temperature attribute is a property object which provides an interface to this private variable.
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# The @property Decorator
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# In Python, property() is a built-in function that creates and returns a property object. The syntax of this function is:
+# property(fget=None, fset=None, fdel=None, doc=None)'
+
+# where,
+
+# fget is function to get value of the attribute
+# fset is function to set value of the attribute
+# fdel is function to delete the attribute
+# doc is a string (like a comment)
+
+# Using @property decorator
+
+class Celsius:
+    def __init__(self, temperature=0):
+        self.temperature = temperature
+
+    def to_fahrenheit(self):
+        return (self.temperature * 1.8) + 32
+
+    @property
+    def temperature(self):
+        print("Getting value...")
+        return self._temperature
+
+    @temperature.setter
+    def temperature(self, value):
+        print("Setting value...")
+        if value < -273.15:
+            raise ValueError("Temperature below -273 is not possible")
+        self._temperature = value
+
+
+print("*"*20,"LINE 172","*"*20)
+# create an object
+human = Celsius(37)
+
+print(human.temperature)
+
+print(human.to_fahrenheit())
+
+# It will give Value error
+# coldest_thing = Celsius(-300)
