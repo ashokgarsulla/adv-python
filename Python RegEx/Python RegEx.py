@@ -163,7 +163,22 @@ pattern = '(\d{3}) (\d{2})'
 match = re.search(pattern, string) 
 
 if match:
-  print(match.group())
+    print(match.group())
+    print(match.group(1))
+    print(match.group(2))
+    print(match.group(1,2))
+    print(match.groups())
+    print(match.start())
+    print(match.end())
+    print(match.span())
+# The re attribute of a matched object returns a regular expression object
+    print(match.re)
+# output: re.compile('(\\d{3}) (\\d{2})')
+
+# string attribute returns the passed string.
+    print(match.string)
+
+
 else:
   print("pattern not found")
 
