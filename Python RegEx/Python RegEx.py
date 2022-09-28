@@ -108,7 +108,7 @@ print(new_string)
 
 # Program to remove all whitespaces
 import re
-
+print("*"*20,"LINE 111","*"*20)
 # multiline string
 string = 'abc 12\
 de 23 \n f45 6'
@@ -123,3 +123,23 @@ new_string = re.subn(pattern, replace, string)
 print(new_string)
 
 # Output: ('abc12de23f456', 4)
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# re.search() : If the search is successful, re.search() returns a match object; if not, it returns None.
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+print("*"*20,"LINE 132","*"*20)
+
+import re
+
+string = "Python is fun"
+
+# check if 'Python' is at the beginning
+match = re.search('\APython', string)
+
+if match:
+  print("pattern found inside the string")
+else:
+  print("pattern not found")  
+
+# Output: pattern found inside the string
+
