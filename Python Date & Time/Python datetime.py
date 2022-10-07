@@ -94,3 +94,16 @@ print("c =", c)
 # time(hour, minute, second, microsecond)
 d = time(11, 34, 56, 234566)
 print("d =", d)
+
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# Print today's year, month and day
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+from datetime import time
+print("-" *30,'LINE 104',"-" *30)
+a = time(11, 34, 56)
+
+print("hour =", a.hour)
+print("minute =", a.minute)
+print("second =", a.second)
+print("microsecond =", a.microsecond)
