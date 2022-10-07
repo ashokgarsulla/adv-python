@@ -131,3 +131,17 @@ print(a)
 b = datetime(2017, 11, 28, 23, 55, 59, 342380)
 print(b)
 
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# Print year, month, hour, minute and timestamp
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+from datetime import datetime
+
+print("-" *30,'LINE 142',"-" *30)
+a = datetime(2017, 11, 28, 23, 55, 59, 342380)
+print("year =", a.year)
+print("month =", a.month)
+print("hour =", a.hour)
+print("minute =", a.minute)
+print("timestamp =", a.timestamp())
