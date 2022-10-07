@@ -20,3 +20,33 @@ print(datetime_object)
 # Get Current Date
 current_data = datetime.date.today()
 print(datetime.date.today())
+
+
+
+# Commonly used classes in the datetime module are:
+
+# date Class
+# time Class
+# datetime Class
+# timedelta Class
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# datetime.date Class
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# You can instantiate date objects from the date class. A date object represents a date (year, month and day).
+from datetime import date
+d  = date(2009,11,2)
+print("-" *30,'LINE 40',"-" *30)
+print(d)
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# Get date from a timestamp
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# We can also create date objects from a timestamp. A Unix timestamp is the number of seconds between a particular date and 
+# January 1, 1970 at UTC. You can convert a timestamp to date using fromtimestamp() method.
+
+
+print("-" *30,'LINE 50',"-" *30)
+timestamp = date.fromtimestamp(1326244364)
+print("Date =", timestamp)
