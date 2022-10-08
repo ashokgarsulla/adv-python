@@ -237,3 +237,17 @@ print("s1:", s1)
 s2 = now.strftime("%d/%m/%Y, %H:%M:%S")
 # dd/mm/YY H:M:S format
 print("s2:", s2)
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# Python strptime() - string to datetime
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+from datetime import datetime
+
+print("-" *30,'LINE 249',"-" *30)
+date_string = "21 June, 2018"
+print("date_string =", date_string)
+
+date_object = datetime.strptime(date_string, "%d %B, %Y")
+print("date_object =", date_object)
