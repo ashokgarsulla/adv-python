@@ -251,3 +251,26 @@ print("date_string =", date_string)
 
 date_object = datetime.strptime(date_string, "%d %B, %Y")
 print("date_object =", date_object)
+
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# Handling timezone in Python
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# Suppose, you are working on a project and need to display date and time based on their timezone. 
+# Rather than trying to handle timezone yourself, we suggest you to use a third-party pytZ module.
+
+
+from datetime import datetime
+import pytz
+print("-" *30,'LINE 266',"-" *30)
+local = datetime.now()
+print("Local:", local.strftime("%m/%d/%Y, %H:%M:%S"))
+
+
+tz_NY = pytz.timezone('America/New_York') 
+datetime_NY = datetime.now(tz_NY)
+print("NY:", datetime_NY.strftime("%m/%d/%Y, %H:%M:%S"))
+
+tz_London = pytz.timezone('Europe/London')
+datetime_London = datetime.now(tz_London)
+print("London:", datetime_London.strftime("%m/%d/%Y, %H:%M:%S"))
