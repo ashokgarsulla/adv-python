@@ -53,3 +53,24 @@ print("Output 4:", d)
 
 d = date_time.strftime("%I%p")
 print("Output 5:", d)
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#  Locale's appropriate date and time
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+from datetime import datetime
+
+timestamp = 1528797322
+date_time = datetime.fromtimestamp(timestamp)
+
+print("-" *30,'LINE 68',"-" *30)
+
+d = date_time.strftime("%c")
+print("Output 1:", d)	
+
+d = date_time.strftime("%x")
+print("Output 2:", d)
+
+d = date_time.strftime("%X")
+print("Output 3:", d)
