@@ -208,3 +208,32 @@ from datetime import timedelta
 print("-" *30,'LINE 208',"-" *30)
 t = timedelta(days = 5, hours = 1, seconds = 33, microseconds = 233423)
 print("total seconds =", t.total_seconds())
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# Python format datetime
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# The way date and time is represented may be different in different places, organizations etc. It's more common to use mm/dd/yyyy 
+# in the US, whereas dd/mm/yyyy is more common in the UK.
+# Python has strftime() and strptime() methods to handle this.
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# Python strftime() - datetime object to string
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+from datetime import datetime
+
+print("-" *30,'LINE 277',"-" *30)
+# current date and time
+now = datetime.now()
+
+t = now.strftime("%H:%M:%S")
+print("time:", t)
+
+s1 = now.strftime("%m/%d/%Y, %H:%M:%S")
+# mm/dd/YY H:M:S format
+print("s1:", s1)
+
+s2 = now.strftime("%d/%m/%Y, %H:%M:%S")
+# dd/mm/YY H:M:S format
+print("s2:", s2)
