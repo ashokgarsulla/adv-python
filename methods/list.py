@@ -33,3 +33,9 @@ print(animal_foods)
 # count : count matching
 count = animal_foods.count("milk")
 print('Count of cat:', count)
+
+# pop :
+print(animal_foods)
+removed_element = animal_foods.pop(-1)
+print('Removed Element:', removed_element)
+print('Updated List:', removed_element)
