@@ -7,3 +7,7 @@ index = animals.index('dog')
 print(index)
 
 # Output: 1
+
+# Append
+animals.append("Billi")
+print(animals)
