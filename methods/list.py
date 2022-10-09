@@ -28,3 +28,8 @@ print(animals)
 print(animal_foods)
 animal_foods.remove("dog")
 print(animal_foods)
+
+
+# count : count matching
+count = animal_foods.count("milk")
+print('Count of cat:', count)
