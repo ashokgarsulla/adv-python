@@ -38,3 +38,16 @@ print("dt_object1 =", dt_object1)
 # Considering date is in mm/dd/yyyy format
 dt_object2 = datetime.strptime(dt_string, "%m/%d/%Y %H:%M:%S")
 print("dt_object2 =", dt_object2)
+
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#  ValueError in strptime() 
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+from datetime import datetime
+print("-" *30,'LINE 50',"-" *30)
+date_string = "12/11/2018"
+date_object = datetime.strptime(date_string, "%d %m %Y")
+
+print("date_object =", date_object)
