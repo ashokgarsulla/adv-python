@@ -39,3 +39,9 @@ print(animal_foods)
 removed_element = animal_foods.pop(-1)
 print('Removed Element:', removed_element)
 print('Updated List:', removed_element)
+
+# reverse list
+print(animal_foods)
+test_rev = animal_foods
+test_rev.reverse()
+print('Reversed List:', test_rev)
