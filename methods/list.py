@@ -17,3 +17,8 @@ animal_foods = ['meat', 'milk','grass']
 print(animal_foods)
 animal_foods.extend(animals)
 print(animal_foods)
+
+# insert
+print(animals)
+animals.insert(3,"Aadmi")
+print(animals)
