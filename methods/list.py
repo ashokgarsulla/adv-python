@@ -45,3 +45,8 @@ print(animal_foods)
 test_rev = animal_foods
 test_rev.reverse()
 print('Reversed List:', test_rev)
+
+# sort
+print(animal_foods)
+animal_foods.sort()
+print("sort",animal_foods)
