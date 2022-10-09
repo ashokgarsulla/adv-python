@@ -48,6 +48,6 @@ print("dt_object2 =", dt_object2)
 from datetime import datetime
 print("-" *30,'LINE 50',"-" *30)
 date_string = "12/11/2018"
-date_object = datetime.strptime(date_string, "%d %m %Y")
+date_object = datetime.strptime(date_string, "%d/%m/%Y")
 
 print("date_object =", date_object)
