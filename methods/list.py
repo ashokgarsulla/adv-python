@@ -50,3 +50,11 @@ print('Reversed List:', test_rev)
 print(animal_foods)
 animal_foods.sort()
 print("sort",animal_foods)
+
+# copy list
+# mixed list
+prime_numbers = [2, 3, 5]
+# copying a list
+numbers = prime_numbers.copy()
+print('Copied List:', numbers)
+# Output: Copied List: [2, 3, 5]
